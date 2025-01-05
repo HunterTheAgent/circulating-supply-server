@@ -18,7 +18,11 @@ app = Flask(__name__)
 # Load configuration from environment
 TOTAL_SUPPLY = int(os.getenv("TOTAL_SUPPLY", 0))
 CONTRACT_ADDRESS = os.getenv("CONTRACT_ADDRESS")
-LOCKED_ADDRESSES = os.getenv("LOCKED_ADDRESSES", "").split(",")
+LOCKED_ADDRESSES = os.getenv("LOCKED_ADDRESSES", "")
+if LOCKED_ADDRESSES is not None:
+    LOCKED_ADDRESSES = LOCKED_ADDRESSES.split(",")
+else:
+    LOCKED_ADDRESSES = []
 TOKEN_DECIMALS = int(os.getenv("TOKEN_DECIMALS", 18))
 API_VERSION = os.getenv("API_VERSION", "v1")
 ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY")
