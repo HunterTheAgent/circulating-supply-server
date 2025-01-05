@@ -40,22 +40,23 @@ Minimal endpoint for circulating supply.
 
 ## Configuration
 
-# Token Configuration
+### Token Configuration
+```env
 TOTAL_SUPPLY=1000000
 CONTRACT_ADDRESS=0xYourTokenContractAddress
 LOCKED_ADDRESSES=0xe04f27eb70e025b78871a2ad7eabe85e61212761,0xAnotherLockedAddress
 TOKEN_DECIMALS=18
 
-# API Configuration
+### API Configuration
 API_VERSION=v1
 ETHERSCAN_API_KEY=YourEtherscanAPIKey
 CHAIN_IDS=8453  # Comma-separated chain IDs (e.g., 8453 for Base Mainnet)
 
-# Caching and Rate Limiting
+### Caching and Rate Limiting
 CACHE_DURATION=900  # Cache duration in seconds (default: 15 minutes)
 RATE_LIMIT=5 per minute  # Requests allowed per minute
 
-# Redis Configuration
+### Redis Configuration
 REDIS_URL=redis://localhost:6379/0
 ```
 
