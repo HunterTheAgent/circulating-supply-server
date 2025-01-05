@@ -36,10 +36,10 @@ Minimal endpoint for circulating supply.
     ],
     "locked_supply": 10000
 }
+```
 
 ## Configuration
 
-```
 # Token Configuration
 TOTAL_SUPPLY=1000000
 CONTRACT_ADDRESS=0xYourTokenContractAddress
